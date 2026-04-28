@@ -202,9 +202,21 @@ function HomePage() {
               <a href="#contact" className="btn btn-primary">
                 Get a Free Call
               </a>
-              <a href="#services" className="btn btn-secondary">
-                Explore Services
-              </a>
+             <button
+  className="btn btn-secondary"
+  onClick={() => {
+    const yOffset = -90;
+    const element = document.getElementById("services");
+    if (element) {
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  }}
+>
+  Explore Services
+</button>
             </div>
 
             <div className="hero-stats">
@@ -549,9 +561,9 @@ function HomePage() {
 
           <div>
             <h4>Contact</h4>
-            <p>Phone: +91 XXXXX XXXXX</p>
+            <p>Phone: 0129-443322</p>
             <p>Email: info@magicminds.com</p>
-            <p>Address: Your Clinic Address Here</p>
+            <p>Address: Greater Kailash, South Delhi-110048</p>
           </div>
         </div>
 

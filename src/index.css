@@ -1,3 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sticky header offset fix */
+section {
+  scroll-margin-top: 90px;
+}
+
 :root {
   --bg: #f7fbff;
   --card: #ffffff;
@@ -873,5 +882,7 @@ img {
 
   .admin-modal-top h2 {
     font-size: 22px;
+    
   }
+  
 }
